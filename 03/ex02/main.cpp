@@ -2,51 +2,32 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int	main(void)
+int main()
 {
-	ClapTrap	a("Eric ClapTrap");
-	ScavTrap	b("J.D. Scavinger");
-	FragTrap	c("Frag Sinatra");
+    ClapTrap clap("POIRE");
 
-	std::cout << std::endl;
-	std::cout << "hitpoins of ClapTrap " << a.getname() << " are " << a.gethitPoints() << std::endl;
-	std::cout << "hitpoins of ScavTrap " << b.getname() << " are " << b.gethitPoints() << std::endl;
-	std::cout << "hitpoins of FragTrap " << c.getname() << " are " << c.gethitPoints() << std::endl;
-	std::cout << std::endl;
-	std::cout << "energypoins of ClapTrap " << a.getname() << " are " << a.getenergyPoints() << std::endl;
-	std::cout << "energypoins of ScavTrap " << b.getname() << " are " << b.getenergyPoints() << std::endl;
-	std::cout << "energypoins of FragTrap " << c.getname() << " are " << c.getenergyPoints() << std::endl;
-	std::cout << std::endl;
-	std::cout << "attackdamage of ClapTrap " << a.getname() << " are " << a.getattackDamage() << std::endl;
-	std::cout << "attackdamage of ScavTrap " << b.getname() << " are " << b.getattackDamage() << std::endl;
-	std::cout << "attackdamage of FragTrap " << c.getname() << " are " << c.getattackDamage() << std::endl;
-	std::cout << std::endl;
-	a.attack(c.getname());
-	b.attack(a.getname());
-	c.attack(b.getname());
-	std::cout << std::endl;
-	a.takeDamage(b.getattackDamage());
-	b.takeDamage(c.getattackDamage());
-	c.takeDamage(a.getattackDamage());
-	std::cout << std::endl;
-	a.beRepaired(5);
-	b.beRepaired(20);
-	c.beRepaired(10);
-	std::cout << std::endl;
-	b.guardGate();
-	c.highFivesGuys();
-	std::cout << std::endl;
-	std::cout << "hitpoins of ClapTrap " << a.getname() << " are " << a.gethitPoints() << std::endl;
-	std::cout << "hitpoins of ScavTrap " << b.getname() << " are " << b.gethitPoints() << std::endl;
-	std::cout << "hitpoins of FragTrap " << c.getname() << " are " << c.gethitPoints() << std::endl;
-	std::cout << std::endl;
-	std::cout << "energypoins of ClapTrap " << a.getname() << " are " << a.getenergyPoints() << std::endl;
-	std::cout << "energypoins of ScavTrap " << b.getname() << " are " << b.getenergyPoints() << std::endl;
-	std::cout << "energypoins of FragTrap " << c.getname() << " are " << c.getenergyPoints() << std::endl;
-	std::cout << std::endl;
-	std::cout << "attackdamage of ClapTrap " << a.getname() << " are " << a.getattackDamage() << std::endl;
-	std::cout << "attackdamage of ScavTrap " << b.getname() << " are " << b.getattackDamage() << std::endl;
-	std::cout << "attackdamage of FragTrap " << c.getname() << " are " << c.getattackDamage() << std::endl;
-	std::cout << std::endl;
-	return (0);
+    clap.attack("JIJI");
+    clap.takeDamage(15);
+    clap.beRepaired(30);
+    clap.attack("JIJI");
+    std::cout << std::endl;
+    
+    ScavTrap Scav("POMME");
+
+    Scav.attack("BANANE");
+    Scav.takeDamage(50);
+    Scav.beRepaired(150);
+    Scav.attack("ANANAS");
+    Scav.guardGate();
+    std::cout << std::endl;
+    
+    FragTrap trap("RAISIN");
+    trap.attack("COCO");
+    trap.takeDamage(4000);
+    trap.beRepaired(600);
+    trap.attack("KIWI");
+    trap.highFivesGuys();
+    std::cout << std::endl;
+    
+    return (0);
 }

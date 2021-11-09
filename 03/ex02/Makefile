@@ -1,28 +1,27 @@
-NAME = fragtrap
+CC		=	clang++
 
-SRC =	main.cpp\
-		ClapTrap.cpp\
-		ScavTrap.cpp\
-		FragTrap.cpp
+NAME	=	FragTrap
 
-OBJS = $(SRC:.cpp=.o)
-CFLAGS = -Wall -Werror -Wextra -pedantic -std=c++98 
+CFLAGS	=	-Wall -Wextra -Werror -g -std=c++98
 
-CC = clang++
+SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp 
+
+OBJ	=	$(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME):	$(OBJS)
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+$(NAME): $(OBJ)	
+	$(CC) -o $(NAME) $(OBJ)
 
-%.o:	%.cpp
-			$(CC) $(CFLAGS) -c $< -o $@
+%.o : %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-			rm -f $(OBJS)
+	rm -f $(OBJ)
 
-fclean: 	clean
-			rm -f $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
-re: fclean all 
-    
+re : fclean all
+
+.PHONY: all fclean clean re

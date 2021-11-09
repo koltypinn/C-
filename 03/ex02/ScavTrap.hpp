@@ -1,22 +1,20 @@
-#ifndef	SCAVTRAP_HPP
-#define	SCAVTRAP_HPP
+#ifndef SCAVTRAPP_HPP
+# define SCAVTRAPP_HPP
 
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {
-	public:
-		ScavTrap();
-		ScavTrap(std::string given_name);
-		ScavTrap(const ScavTrap	&s);
-		ScavTrap &operator=(const ScavTrap &s);
-
-		void	attack(std::string const &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void	guardGate(void);
-
-		~ScavTrap();
+    public:
+        ScavTrap( void ) {return ;};
+        ScavTrap(std::string name);
+        ScavTrap(ScavTrap const &);
+        ~ScavTrap();
+        void guardGate();
+        void attack( std::string const & target );
+        
+        ScavTrap & operator=(ScavTrap const &rhs);
 };
+
 
 #endif
