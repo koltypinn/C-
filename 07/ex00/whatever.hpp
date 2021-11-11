@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 13:40:16 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/12 15:25:03 by gsmets           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef WHATEVER_H
 # define WHATEVER_H
 
@@ -32,9 +20,6 @@ template < typename T >
 T 		max(T &a, T &b) {
 	return (a > b ? a : b);
 }
-
-
-// This class is required for correction and testing
 
 class Awesome {
 private:
