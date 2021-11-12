@@ -22,4 +22,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:	clean fclean re bonus bench bclean
+.PHONY:	clean fclean re 

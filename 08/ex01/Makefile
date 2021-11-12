@@ -1,10 +1,10 @@
-SRCS	= main.cpp
+SRCS	= main.cpp span.cpp
 OBJS	= $(SRCS:.cpp=.o)
 NAME	= test.out
 CLANG	= clang++ -std=c++98 -pedantic-errors
 FLAGS	= -Wall -Wextra -Werror
 INCLUDE	= none
-HEADER	= whatever.hpp
+HEADER	= span.hpp
 
 all:	$(NAME)
 
