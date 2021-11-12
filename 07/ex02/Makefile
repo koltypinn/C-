@@ -8,7 +8,7 @@ HEADER	= Array.hpp
 
 all:	$(NAME)
 
-$(NAME): $(OBJS)$(HEADER)
+$(NAME): $(OBJS) $(HEADER)
 	$(CLANG) $(FLAGS) -o $(NAME) $(OBJS)
 
 %.o: %.cpp $(HEADER)
