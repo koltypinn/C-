@@ -4,8 +4,6 @@
 #include <ctime>
 #include "iter.hpp"
 
-// Following test is requested in the correction
-
 class Awesome {
 public:
 	Awesome( void ) : _n( 42 ) { return; }
@@ -20,7 +18,7 @@ template< typename T >
 void print( T const & x ) { std::cout << x << std::endl; return; }
 
 int main() {
-	int tab[] = { 0, 1, 2, 3, 4 }; // <--- J'ai jamais compris pourquoi on peut pas ecrire int[] tab. Ca aurait plus de sens vous trouvez pas ?
+	int tab[] = { 0, 1, 2, 3, 4 };
 	Awesome tab2[5];
 
 	iter( tab, 5, print );

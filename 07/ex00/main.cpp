@@ -5,55 +5,32 @@
 #include "whatever.hpp"
 
 int 	main() {
-	// Initializing rand() seed (new one every second)
-	srand(time(0));
+	int a = 50;
+	int b = 250;
 
-	int a = rand() % 200;
-	int b = rand() % 200;
-
-	std::cout << "- TESTING SIMPLE TYPE -" << std::endl;
-	std::cout << "----- Generated value -----" << std::endl;
-		std::cout << "a is: " << a << std::endl;
-		std::cout << "b is: " << b << std::endl;
+	std::cout << "a is: " << a << std::endl;
+	std::cout << "b is: " << b << std::endl;
 	std::cout << std::endl;
-
-	std::cout << "----- value after using swap-----" << std::endl;
-		swap(a, b);
-		std::cout << "a is: " << a << std::endl;
-		std::cout << "b is: " << b << std::endl;
+	std::cout << "-----swap-----" << std::endl;
+	swap(a, b);
+	std::cout << "a is: " << a << std::endl;
+	std::cout << "b is: " << b << std::endl;
 	std::cout << std::endl;
-
-	std::cout << "----- test of min -----" << std::endl;
-		std::cout << "Lowest value between a(" << a << ") and b(" << b << ") is: " << min(a, b) << std::endl;
+	std::cout << "-----min -----" << std::endl;
+	std::cout << min(a, b) << std::endl;
 	std::cout << std::endl;
-
-	std::cout << "----- test of max-----" << std::endl;
-		std::cout << "Highest value between a(" << a << ") and b(" << b << ") is: " << max(a, b) << std::endl;
+	std::cout << "-----max-----" << std::endl;
+	std::cout << max(a, b) << std::endl;
 	std::cout << std::endl;
 
 
 
-	Awesome aw1(rand() % 200);
-	Awesome aw2(rand() % 200);
-	std::cout << "- TESTING COMPLEX TYPE -" << std::endl;
-	std::cout << "----- Generated value -----" << std::endl;
-		std::cout << "aw1 is: " << aw1.getN() << std::endl;
-		std::cout << "aw2 is: " << aw2.getN() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "----- value after using swap-----" << std::endl;
-		swap(aw1, aw2);
-		std::cout << "aw1 is: " << aw1.getN() << std::endl;
-		std::cout << "aw2 is: " << aw2.getN() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "----- test of min -----" << std::endl;
-		std::cout << "Lowest value between a(" << aw1.getN() << ") and b(" << aw2.getN() << ") is: " << min(aw1, aw2).getN() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "----- test of max-----" << std::endl;
-		std::cout << "Highest value between a(" << aw1.getN() << ") and b(" << aw2.getN() << ") is: " << max(aw1, aw2).getN() << std::endl;
-	std::cout << std::endl;
+	Awesome c(2);
+	Awesome d(4);
+	swap(c, d);
+	std::cout << c.getN() << " " << d.getN() << std::endl;
+	std::cout << min(c, d).getN() << std::endl;
+	std::cout << max(c, d).getN() << std::endl;
 
 	return (0);
 }
